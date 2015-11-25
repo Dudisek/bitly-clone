@@ -7,10 +7,4 @@ class Url < ActiveRecord::Base
 		# self.short_url = SecureRandom.hex(3)
 		 self.short_url = SecureRandom.hex(3)
 	end
-
-	# def self.adding(value)
-	# 	puts "hello"
-	# 	Url.create = value
-	# end
-
 end

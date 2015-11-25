@@ -4,9 +4,14 @@ get '/' do
 end
 
 post '/urls' do
-	url = Url.create(long_url: params[:long_url])
+	p url = Url.create(long_url: params[:input_long_url])
 	# url.short_url = url.shorten
 	# url.save
+	redirect "/"
+end
+
+post '/delete' do
+	Url.destroy(params[:write_id])
 	redirect "/"
 end
 
@@ -15,3 +20,6 @@ get '/:short_url' do
 	redirect url.long_url
 end
 	
+# <% @urls.each do |url| %>
+# 	<%= url.long_url %> - <%= url.short_url %> <br>
+# <% end %>

@@ -1,11 +1,30 @@
-<h1>Hello World</h1>
+<h1>MAGiC URL Shortener</h1>
 <p>See Me in views/static/index.html.erb</p>
 <form action="/urls" method="post">
 	Enter URL:
-	<input type="text" name="long_url">
+	<input type="text" name="input_long_url">
 	<input type="submit" value="Submit">
 </form>
 
+<form action="/delete" method="post">
+	Delete URL:
+	<input type="number" name="write_id">
+	<input type="submit" value="Submit">
+</form>
+
+<table style= "width:50%" border="1" cellpadding="10" align="left">
+	<tr>
+		<td>ID</td>
+		<td>LONG</td>
+		<td>SHORT</td>
+	</tr>
 <% @urls.each do |url| %>
-	<%= url.long_url %> - <%= url.short_url %> <br>
+	<tr> 
+		<td> <%= url.id %> </td> 
+		<td> <%= url.long_url %> </td> 
+		<td> <a href="http://localhost:9393/<%= url.short_url %>">http://localhost:9393/<%= url.short_url %> </a> </td> 
+	</tr> <br>
 <% end %>
+</table>
+
+
