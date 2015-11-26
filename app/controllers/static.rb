@@ -15,7 +15,17 @@ post '/delete' do
 	redirect "/"
 end
 
+get '/contact' do
+  erb :"static/contact"
+end
+
 get '/:short_url' do
 	url = Url.find_by(short_url: params[:short_url])
-	redirect url.long_url
+	
+	unless url.nil?
+		redirect url.long_url
+	else
+		redirect "/"
+	end
 end
+

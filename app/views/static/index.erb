@@ -1,27 +1,36 @@
 
  
 <div class="top-bar" id="top-bar">
-<h1>MAGiC URL Shortener</h1>
+
+
+	<div id="share-buttons">
+			<h1>MAGiC URL Shortener
+		<a href="https://bufferapp.com/" target="_blank">
+	        <img src="img/fb.png" alt="Buffer" /></h1>
+	  </a>
+	</div>
 </div>
+
 <center>
 <form action="/urls" method="post" class="style-2">
 	<input class="input clearfix" type="text" name="input_long_url" placeholder="Enter your URL"></br>
 	<input class="btn" type="submit" value="Submit">
 </form>
-
+</center>
 <!-- <form action="/delete" method="post">
 	Delete URL:
 	<input type="number" name="write_id">
 	<input type="submit" value="Submit">
 </form> -->
-</center>
 
-<table style= "width:90%" border="1" cellpadding="10" align="center">
+
+<table align="center">
+
 	<tr>
-		<td>ID</td>
-		<td>LONG</td>
-		<td>SHORT</td>
-		<td>CREATE AT</td>
+		<th>ID</th>
+		<th>LONG</th>
+		<th>SHORT</th>
+		<th>CREATE AT</th>
 	</tr>
 <% @urls.each do |url| %>
 	<tr> 
@@ -32,5 +41,5 @@
 
 	</tr> <br>
 <% end %>
-
+</table>
 

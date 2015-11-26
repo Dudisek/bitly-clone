@@ -13,6 +13,7 @@ body {
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
+
 }
 
 
@@ -41,29 +42,6 @@ input[type="text"] {
 
 
 
-
-/*
-input[type=submit] {
-	border: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: gray;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-*/
-
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { fon
 	t-size: 100%; padding: 0; margin: 0; height: 100%;}
@@ -77,8 +55,9 @@ body, html { fon
 	font-size: inherit;
 	color: inherit;
 	background: #fcd04b;
+	box-shadow: 0 6px #DEAF00;
 	cursor: pointer;
-	padding: 25px 80px;
+	padding: 18px 80px;
 	display: inline-block;
 	margin: 15px 30px;
 	text-transform: uppercase;
@@ -89,18 +68,12 @@ body, html { fon
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
-
-
 }
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
+/**/
+h1 img {float:right;
+	margin:0 5px 0 0;
+width: 45px;
+padding: 5px;}
 
 .top-bar 
 {
@@ -111,15 +84,57 @@ body, html { fon
   filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 
-.btn-6d {
-	border: 2px dashed #226fbe;
+/* unvisited link */
+a:link {
+    color: black;
 }
 
-.btn-6d:hover {
-	background: transparent;
-	color: #226fbe;
+/* visited link */
+a:visited {
+    color: #333;
 }
 
-#footer {
-  clear: both;			
+/* mouse over link */
+a:hover {
+    color: gray;
 }
+
+/* selected link */
+a:active {
+    color: #333;
+}
+
+table { 
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 95%; 
+border-collapse: 
+collapse; border-spacing: 0; 
+    opacity: 0.85;
+    background: transparent;
+}
+
+td, th { 
+border: 1px solid transparent; /* No more visible border */
+height: 30px; 
+transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+background: #000000;
+opacity:0.7;
+color: white;
+ /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+
+
+
+
+
