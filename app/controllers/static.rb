@@ -4,13 +4,13 @@ get '/' do
 end
 
 post '/urls' do
+	puts "[LOG:] Creating ID"
 	@url = Url.create(long_url: params[:input_long_url])
-	# url.short_url = url.shorten
-	# url.save
 	redirect "/"
 end
 
 post '/delete' do
+	puts "[LOG:] Deleteing ID"
 	Url.destroy(params[:write_id])
 	redirect "/"
 end

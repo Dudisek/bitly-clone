@@ -1,0 +1,125 @@
+h1 {
+	text-align: center;
+	color: white;
+	size: 40;
+}
+
+
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+
+	background-image: url("/img/background-css.jpg");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 50%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 33px;
+  text-align: center;
+}
+
+/*.style-2 input[type="text"] {*/
+
+.style-2 input[type="text"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+}
+.style-2 input[type="text"]:focus, .style-2 input[type="text"].focus {
+  border: solid 5px #969696;
+}
+
+
+
+
+/*
+input[type=submit] {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: gray;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+*/
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { fon
+	t-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: #fcd04b;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+
+
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.top-bar 
+{
+  margin: 30px;
+  background-color: #000000;
+  border: 1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.btn-6d {
+	border: 2px dashed #226fbe;
+}
+
+.btn-6d:hover {
+	background: transparent;
+	color: #226fbe;
+}
+
+#footer {
+  clear: both;			
+}

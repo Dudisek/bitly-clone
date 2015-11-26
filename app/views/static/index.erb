@@ -1,21 +1,22 @@
 
-
-<h1>Hello World</h1>
+ 
+<div class="top-bar" id="top-bar">
 <h1>MAGiC URL Shortener</h1>
-<p>See Me in views/static/index.html.erb</p>
-<form action="/urls" method="post">
-	Enter URL:
-	<input type="text" name="input_long_url">
-	<input type="submit" value="Submit">
+</div>
+<center>
+<form action="/urls" method="post" class="style-2">
+	<input class="input clearfix" type="text" name="input_long_url" placeholder="Enter your URL"></br>
+	<input class="btn" type="submit" value="Submit">
 </form>
 
-<form action="/delete" method="post">
+<!-- <form action="/delete" method="post">
 	Delete URL:
 	<input type="number" name="write_id">
 	<input type="submit" value="Submit">
-</form>
+</form> -->
+</center>
 
-<table style= "width:100%" border="1" cellpadding="10" align="left">
+<table style= "width:90%" border="1" cellpadding="10" align="center">
 	<tr>
 		<td>ID</td>
 		<td>LONG</td>
@@ -31,5 +32,5 @@
 
 	</tr> <br>
 <% end %>
-</table>
+
 
