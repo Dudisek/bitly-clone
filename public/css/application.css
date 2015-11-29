@@ -1,26 +1,40 @@
+
+
+
+
 h1 {
 	text-align: center;
 	color: white;
 	size: 40;
+	margin-left: 20;
+		clear: both;
+	/*float: left;*/
+
 }
 
 
+/*.back {
+    background-image: url(/img/background-css.jpg);
+    background-position: center;
+    background-size: cover;
+    /*padding-top: 300px;
+    padding-bottom: 150px
+}*/
 
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
-
 	background-image: url("/img/background-css.jpg");
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-
+  background-size: cover;
 }
 
 
-input[type="text"] {
+input[type="url"] {
   display: block;
   margin: 0;
-  width: 50%;
+  width: 60%;
   font-family: "Open Sans", sans-serif;
   font-size: 33px;
   text-align: center;
@@ -30,24 +44,24 @@ input[type="text"] {
 
 .style-2 input[type="text"] {
   padding: 10px;
-  border: solid 5px #c9c9c9;
-  -webkit-transition: border 0.3s;
+  border: solid 5px #	;
+/*  -webkit-transition: border 0.3s;
   -moz-transition: border 0.3s;
   -o-transition: border 0.3s;
-  transition: border 0.3s;
+  transition: border 0.3s;*/
 }
 .style-2 input[type="text"]:focus, .style-2 input[type="text"].focus {
   border: solid 5px #969696;
 }
 
-
+/*
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { fon
 	t-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 .clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+.clearfix:after { clear: both; }*/
 
 .btn {
 	border: none;
@@ -65,9 +79,9 @@ body, html { fon
 	font-weight: 700;
 	outline: none;
 	position: relative;
-	-webkit-transition: all 0.3s;
+/*	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	transition: all 0.3s;*/
 }
 /**/
 h1 img {float:right;
@@ -115,12 +129,11 @@ collapse; border-spacing: 0;
 }
 
 td, th { 
-border: 1px solid transparent; /* No more visible border */
+border: 1px solid transparent; 
 height: 30px; 
-transition: all 0.3s;  /* Simple transition for hover effect */
 }
 
-th {
+.th2 {
 background: #000000;
 opacity:0.7;
 color: white;
@@ -133,8 +146,64 @@ background: #FAFAFA;
 text-align: center;
 }
 
+.table1 {
+background: none;
+width: 65%;
+}
+.th1 {
+background: none;
+}
+.circle {background: none;
+  border: solid 5px #000;
+padding: 40;
+width:100px;
+text-align: center;
+display: inline;
+border-radius: 30%;
+line-height: 50px;  
+}
 
 
+.required_notification {
+    color:#d45252; 
+    margin:5px 0 0 0; 
+    display:inline;
+    float:right;
+}
+::-webkit-validation-bubble-message {
+    padding: 1em;
+}
+input:required:invalid, input:focus:valid {
+  /*-moz-box-shadow: all;*/
+  /*background: #fff url(/img/warning.png) no-repeat 98% center;*/
+box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
 
+input:required:valid {
+  /* insert your own styles for valid form input */
+  background: #fff url(https://cdn0.iconfinder.com/data/icons/fatcow/32x32/tick.png) no-repeat 98% center;
+box-shadow: 0 0 5px #2eb82e;
+    border-color: #29a329
+}
+.form_hint {
+    background: #d45252;
+    border-radius: 3px 3px 3px 3px;
+    color: white;
+    margin-left:8px;
+    padding: 1px 6px;
+    z-index: 999; /* hints stay above all other elements */
+    position: absolute; /* allows proper formatting if hint is two lines */
+    display: none;
+}
 
-
+.form_hint::before {
+    content: "\25C0"; /* left point triangle in escaped unicode */
+    color:#d45252;
+    position: absolute;
+    top:1px;
+    left:-6px;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
+.contact_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */

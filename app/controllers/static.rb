@@ -23,6 +23,8 @@ get '/:short_url' do
 	url = Url.find_by(short_url: params[:short_url])
 	
 	unless url.nil?
+		url.counter = url.counter + 1	
+		url.save	
 		redirect url.long_url
 	else
 		redirect "/"
