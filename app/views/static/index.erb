@@ -27,11 +27,11 @@
 </table>
 </center><br /><br /><br />
 
-
-
+<!-- required pattern="https?://.+" -->
+<!-- required -->
 <center>
 <form action="/urls" method="post" class="style-2">
-	<input type="url" name="input_long_url" placeholder="Enter your URL" required pattern="https?://.+" ></br>
+	<input type="url" name="input_long_url" placeholder="Enter your URL" required ></br>
 	<input class="btn" type="submit" value="Short IT!">
 </form>
 </center>
@@ -46,7 +46,7 @@
 		<th class="th2">LONG</th>
 		<th class="th2" colspan="2">SHORT</th>
 		<th class="th2">CREATE AT</th>
-		<th class="th2">COUNTER</th>
+		<th class="th2">CLICKS</th>
 	</tr>
 <% @urls.each do |url| %>
 	<tr> 

@@ -9,11 +9,11 @@ post '/urls' do
 	redirect "/"
 end
 
-post '/delete' do
-	puts "[LOG:] Deleteing ID"
-	Url.destroy(params[:write_id])
-	redirect "/"
-end
+# post '/delete' do
+# 	puts "[LOG:] Deleteing ID"
+# 	Url.destroy(params[:write_id])
+# 	redirect "/"
+# end
 
 get '/contact' do
   erb :"static/contact"
@@ -23,8 +23,7 @@ get '/:short_url' do
 	url = Url.find_by(short_url: params[:short_url])
 	
 	unless url.nil?
-		url.counter = url.counter + 1	
-		url.save	
+		url.count
 		redirect url.long_url
 	else
 		redirect "/"

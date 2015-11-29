@@ -18,6 +18,7 @@ gem 'sinatra-activerecord'
 # Adding Database elements
 gem 'pg'
 
+gem 'valid_url'
 # Adding rake for management
 gem 'rake'
 
