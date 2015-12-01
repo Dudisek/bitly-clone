@@ -3,7 +3,7 @@
  
 <div class="top-bar" id="top-bar">
 
-			<h1>MAGiC URL Shortener</h1>
+			<h1>MAGiC<span class="green">.</span>URL Shortener</h1>
 	<!-- 	<a href="https://bufferapp.com/" target="_blank">
 	        <img src="img/fb.png" alt="Buffer"   </a>/> -->
 	<a href="contact">Contact</a>
@@ -30,7 +30,7 @@
 
 
 <center>
-<form action="/urls" method="post" class="style-2">
+<form id="target" action="/urls" method="post" class="style-2">
 	<input class="paste" type="url" name="input_long_url" placeholder="Enter your URL" required ></br>
 	<input class="btn" type="submit" value="Short IT!">
 </form>
@@ -38,7 +38,7 @@
 
 <br /><br />
 
-<table id="table-url-links">
+<table class="table-url-links">
 	<tr>
 		<th class="th2">ID</th>
 		<th class="th2">Long URL</th>

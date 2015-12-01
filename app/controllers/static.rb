@@ -10,8 +10,21 @@ end
 post '/urls' do
 	puts "[LOG:] Creating ID"
 	@url = Url.create(long_url: params[:input_long_url])
-	redirect "/"
+	# @urls = Url.all
+	# redirect "/"
+	# @url.to_json
+	# @urls.each do |url|
+	  "<tr>
+      <td>#{@url.id}</td>
+      <td>#{@url.long_url}</td>
+      <td><a href = <#{@url.short_url}>#{@url.short_url}</a></td>
+      <td>Copy</td>
+      <td>#{@url.created_at.strftime("%d %b. %Y at %H:%M")}</td>
+      <td>#{@url.counter}</td>
+   </tr>"
+ # end
 end
+
 
 # post '/delete' do
 # 	puts "[LOG:] Deleteing ID"
