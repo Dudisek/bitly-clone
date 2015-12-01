@@ -38,7 +38,8 @@ $(".tady").click(function() {
 	           success: function(response)
 	           {	
 	               $(".table-url-links").append(response);
-	               
+	               $(".paste").val("CONGRATULATION:))");
+	               	$( ".success:hidden:first" ).fadeIn(3000);
 	                // $(".table-url-links").html(response);
 	           	// show response from the php script.
 	           }
@@ -46,7 +47,7 @@ $(".tady").click(function() {
 	    e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
 
- $( ".paste" ).empty();
+
 
 // #######  ###### STATISTIC ###### ########
 

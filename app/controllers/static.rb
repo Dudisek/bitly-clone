@@ -1,15 +1,20 @@
 get '/' do
-	@urls = Url.all
-	@total_url = Url.count
+
+	@urls = Url.order(id: :desc).limit(10)
+	# @total_url = Url.count
 	# puts @total_saved_char = Url.saved_characters
 	# @total_click = Url.total_click
+	erb :"static/index"
 
-  erb :"static/index"
 end
 
 post '/urls' do
 	puts "[LOG:] Creating ID"
 	@url = Url.create(long_url: params[:input_long_url])
+	# url_shorten_qty = Setting.first.url_shorten_qty + 1
+	# Setting.update(url_shorten_qty: url_shorten_qty)
+
+	
 	# @urls = Url.all
 	# redirect "/"
 	# @url.to_json
