@@ -38,7 +38,7 @@ $(".tady").click(function() {
 	           success: function(response)
 	           {	
 	               $(".table-url-links").append(response);
-	               $(".paste").val("CONGRATULATION:))");
+	               $(".paste").val("CONGRATULATIONS");
 	               	$( ".success:hidden:first" ).fadeIn(3000);
 	                // $(".table-url-links").html(response);
 	           	// show response from the php script.
