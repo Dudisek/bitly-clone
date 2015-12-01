@@ -1,5 +1,5 @@
 require_relative '../config/environments/init'
-require_relative '../app/models/url'
+# require_relative '../app/models/url'
 require 'securerandom'
 
 data = []
