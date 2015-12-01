@@ -38,6 +38,7 @@ $(".tady").click(function() {
 	           success: function(response)
 	           {	
 	               $(".table-url-links").append(response);
+	               
 	                // $(".table-url-links").html(response);
 	           	// show response from the php script.
 	           }

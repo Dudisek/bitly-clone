@@ -1,5 +1,9 @@
-# require 'faker'
+data = []
 
+File.open("urls", "r").each_line do |line|
+  # name: "Angela"    job: "Writer"    ...
+  data << line.gsub(/[(,)]/i, '')
+end
 
-# Faker::Internet.url
-
+# data = data.gsub(/[(,)]/i, '')
+puts data
