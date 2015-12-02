@@ -20,7 +20,7 @@ post '/urls' do
 	# @url.to_json
 	# @urls.each do |url|
 	{
-		"string": "<tr>
+		string: "<tr>
       <td>#{@url.id}</td>
       <td>#{@url.long_url}</td>
       <td><a href = <#{@url.short_url}>http://localhost:9393/#{@url.short_url}</a></td>
@@ -28,7 +28,7 @@ post '/urls' do
       <td>#{@url.created_at.strftime("%d %b. %Y at %H:%M")}</td>
       <td>#{@url.counter}</td>
    </tr>",
-   "url": "http://localhost:9393/#{@url.short_url}"
+   url: "http://localhost:9393/#{@url.short_url}"
 	}.to_json
 	  
 
