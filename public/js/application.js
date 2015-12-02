@@ -34,12 +34,14 @@ $(".tady").click(function() {
 	    $.ajax({
 	           type: "POST",
 	           url: "/urls",
-	           data: $(this).serialize(), // serializes the form's elements.
-	           success: function(response)
+	           data: $(this).serialize(),
+	           dataType: "JSON", // serializes the form's elements.
+	           success: function(response1)
 	           {	
-	               $(".table-url-links").append(response);
-	               $(".paste").val("CONGRATULATIONS");
-	               	$( ".success:hidden:first" ).fadeIn(3000);
+	               $(".table-url-links").append(response1.string);
+	               // window.setTimeout( show_popup, 5 );
+	               $(".paste").val(response1.url);
+	               	$( ".success" ).fadeIn(3000);
 	                // $(".table-url-links").html(response);
 	           	// show response from the php script.
 	           }
