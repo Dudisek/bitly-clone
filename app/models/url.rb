@@ -33,7 +33,7 @@ class Url < ActiveRecord::Base
 			array_short = Url.select(:short_url)
 			array_long = Url.select(:long_url)
 			puts "[LOG] SHORT URL"
-			array_short.each do |a| total_short += "#{APP_ROOT}".length + a.short_url.length end
+			array_short.each do |a| total_short += "#{ENV['APP_URL']}".length + a.short_url.length end
 			array_long.each do |a| total_long += a.long_url.length end
 			total = total_long - total_short
 	end
