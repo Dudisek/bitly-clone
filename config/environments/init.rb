@@ -32,6 +32,9 @@ require 'byebug'
 APP_ROOT = Pathname.new(File.expand_path('../../../', __FILE__))
 APP_NAME = APP_ROOT.basename.to_s
 
+# Setup public folder route
+set :public_folder, File.join(APP_ROOT, "public")
+
 # Setup sessions, logging and dump_errors
 use Rack::Session::Cookie, expire_after: ENV['SESSION_EXPIRE'] || 2592000, # seconds
                            secret: ENV['SESSION_SECRET'] || 'this is a secret shhhhh',
