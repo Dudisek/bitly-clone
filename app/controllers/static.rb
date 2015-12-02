@@ -28,7 +28,7 @@ post '/urls' do
       <td>#{@url.created_at.strftime("%d %b. %Y at %H:%M")}</td>
       <td>#{@url.counter}</td>
    </tr>",
-   url: "#{ENV['APP_URL']}#{@url.short_url}"
+   url: "#{ENV['APP_URL']}/#{@url.short_url}"
 	}.to_json
 	  
 
