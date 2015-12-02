@@ -3,7 +3,7 @@
  
 <div class="top-bar" id="top-bar">
 
-			<h1>MAGiC<span class="green">.</span>URL Shortener</h1>
+			<h1><span class="red">M</span><span class="blue">A</span><span class="green">G</span><span class="yellow">i</span><span class="orange">C</span><span class="colour">.</span>URL </h1>
 	<!-- 	<a href="https://bufferapp.com/" target="_blank">
 	        <img src="img/fb.png" alt="Buffer"   </a>/> -->
 	<a href="contact">Contact</a>
@@ -12,6 +12,11 @@
 
 </div><br />
 
+<div class="success">
+<p>Your link was succesfully added into our database.</p>
+</div>
+
+
 <table class='table1' align="center">
 		<th class="th1" >
 				<img src="img/bubl.png" class="circle" alt="Buffer" />
@@ -19,11 +24,11 @@
 		</th>
 		<th class="th1">
 				<img src="img/copy.png" class="circle" alt="Buffer" />
-				<p>2. Copy &amp; Share</p>
+				<p>2. Copy &amp; Paste</p>
 		</th>
 		<th class="th1">
 				<img src="img/increase.png" class="circle" alt="Buffer" />
-				<p>3. Measure</p>
+				<p>3. Share &amp; Measure</p>
 		</th>
 </table>
 <br /><br /><br />
@@ -45,13 +50,13 @@
 		<th class="th2" colspan="2">Short URL</th>
 		<th class="th2">Create At</th>
 		<th class="th2">Clicks</th>
-	</tr>
+	</tr>	
 <% @urls.each do |url| %>
 	<tr> 
 		<td> <%= url.id %> </td> 
 		<td> <%= url.long_url %> </td> 
 		<td> <a href="http://localhost:9393/<%= url.short_url %>">http://localhost:9393/<%= url.short_url %> </a> </td>
-		<td><a id="copy_shortlink" class="hide" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
+		<td><a id="copy_shortlink" class="" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
 			<td> <%= url.created_at.strftime("%d %b. %Y at %H:%M") %> </td>  
 			<td> <%= url.counter %> </td> 
 	</tr>
@@ -61,8 +66,7 @@
 
 <br /><br /><br />
 
-<h1>MAGiC STATISTIC</h1>
-<h3>Thanks for being with us</h3>
+<h1>MAGiC.STATISTIC</h1>
 
 <div class="wrapper">
     <div class="counter col_fourth">
@@ -85,8 +89,9 @@
 
     <div class="counter col_fourth end">
       <i class="fa fa-bug fa-2x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="157" data-speed="1500"></h2>
-      <p class="count-text ">SomeText GoesHere</p>
+      <h2 class="timer count-title" id="count-number" data-to="0" data-speed="1500"></h2>
+      <p class="count-text ">Coming Soon</p>
     </div>
 </div>
+<br /><h3>Thanks for being with us</h3>
 
