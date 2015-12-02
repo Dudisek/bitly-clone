@@ -1,9 +1,9 @@
 get '/' do
 
 	@urls = Url.order(id: :desc).limit(10)
-	# @total_url = Url.count
-	# puts @total_saved_char = Url.saved_characters
-	# @total_click = Url.total_click
+	@total_url = Url.count
+	@total_saved_char = Url.saved_characters
+	@total_click = Url.total_click
 	erb :"static/index"
 
 end
