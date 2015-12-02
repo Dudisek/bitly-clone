@@ -23,7 +23,7 @@ post '/urls' do
 		string: "<tr>
       <td>#{@url.id}</td>
       <td>#{@url.long_url}</td>
-      <td><a href = <#{@url.short_url}>http://localhost:9393/#{@url.short_url}</a></td>
+      <td><a href = #{@url.short_url}>#{ENV[APP_URL]}/#{@url.short_url}</a></td>
       <td>Copy</td>
       <td>#{@url.created_at.strftime("%d %b. %Y at %H:%M")}</td>
       <td>#{@url.counter}</td>

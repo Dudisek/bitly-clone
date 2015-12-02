@@ -52,7 +52,7 @@
 	<tr> 
 		<td> <%= url.id %> </td> 
 		<td> <%= url.long_url %> </td> 
-		<td> <a href="<%APP_ROOT%><%= url.short_url %>"><%=APP_ROOT%>/<%= url.short_url %> </a> </td>
+		<td> <a href="http://localhost:9393/<%= url.short_url %>">	http://localhost:9393/<%= url.short_url %> </a> </td>
 		<td><a id="copy_shortlink" class="" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
 			<td> <%= url.created_at.strftime("%d %b. %Y at %H:%M") %> </td>  
 			<td> <%= url.counter %> </td> 
