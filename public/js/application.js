@@ -18,36 +18,40 @@ $( ".paste" ).on( "paste", function() {
 });
 
 
-$(".tady").click(function() {
+$(".links").click(function() {
     $('html, body').animate({
         scrollTop: $(".table-url-links").offset().top
     }, 700);
 });
 
+$(".statistic").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".statistic-here").offset().top
+    }, 700);
+});
 
 
+$("#target").submit(function(e) {
 
-	$("#target").submit(function(e) {
+  // var url = "path/to/your/script.php"; // the script where you handle the form input.
 
-    // var url = "path/to/your/script.php"; // the script where you handle the form input.
-
-	    $.ajax({
-	           type: "POST",
-	           url: "/urls",
-	           data: $(this).serialize(),
-	           dataType: "JSON", // serializes the form's elements.
-	           success: function(response1)
-	           {	
-	               $(".table-url-links").append(response1.string);
-	               // window.setTimeout( show_popup, 5 );
-	               $(".paste").val(response1.url);
-	               	$( ".success" ).fadeIn(3000);
-	                // $(".table-url-links").html(response);
-	           	// show response from the php script.
-	           }
-	         });
-	    e.preventDefault(); // avoid to execute the actual submit of the form.
-	});
+  $.ajax({
+         type: "POST",
+         url: "/urls",
+         data: $(this).serialize(),
+         dataType: "JSON", // serializes the form's elements.
+         success: function(response1)
+         {	
+             $(".table-url-links").append(response1.string);
+             // window.setTimeout( show_popup, 5 );
+             $(".paste").val(response1.url);
+             	$( ".success" ).fadeIn(3000);
+              // $(".table-url-links").html(response);
+         	// show response from the php script.
+         }
+       });
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+});
 
 
 
@@ -151,14 +155,4 @@ $(".tady").click(function() {
 		$this.countTo(options);
 	  }
 	});
-
-
-
-
-
-
-
-
  });
-
-

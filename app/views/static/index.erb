@@ -1,44 +1,40 @@
 <div class="top-bar" id="top-bar">
 
-			<h1><span class="red">M</span><span class="blue">A</span><span class="green">G</span><span class="yellow">i</span><span class="orange">C</span><span class="colour">.</span>URL </h1>
-	<!-- 	<a href="https://bufferapp.com/" target="_blank">
-	        <img src="img/fb.png" alt="Buffer"   </a>/> -->
-	<a href="contact">Contact</a>
-	<a class="tady" href="#">Links</a>
+	<h1><span class="red">M</span><span class="blue">A</span><span class="green">G</span><span class="yellow">i</span><span class="orange">C</span><span class="colour">.</span>URL </h1>
 
+	<a class="statistic" href="#">Statistic</a> | 
+	<a class="links" href="#">Links</a>
 
-</div><br />
-
-<div class="success">
-<p>Your link was succesfully added into our database.</p>
 </div>
 
+<br>
+<div class="success"><p>Your link was succesfully added into our database.</p></div>
 
 <table class='table1' align="center">
-		<th class="th1" >
-				<img src="img/bubl.png" class="circle" alt="Buffer" />
-				<p>1. Short Your Link</p>
-		</th>
-		<th class="th1">
-				<img src="img/copy.png" class="circle" alt="Buffer" />
-				<p>2. Copy &amp; Paste</p>
-		</th>
-		<th class="th1">
-				<img src="img/increase.png" class="circle" alt="Buffer" />
-				<p>3. Share &amp; Measure</p>
-		</th>
+	<th class="th1" >
+		<img src="img/bubl.png" class="circle" alt="Buffer" />
+		<p>1. Short Your Link</p>
+	</th>
+	<th class="th1">
+		<img src="img/copy.png" class="circle" alt="Buffer" />
+		<p>2. Copy &amp; Paste</p>
+	</th>
+	<th class="th1">
+		<img src="img/increase.png" class="circle" alt="Buffer" />
+		<p>3. Share &amp; Measure</p>
+	</th>
 </table>
-<br /><br /><br />
 
+<br><br><br>
 
 <center>
-<form id="target" action="/urls" method="post" class="style-2">
-	<input class="paste" type="url" name="input_long_url" placeholder="Enter your URL" required ></br>
-	<input class="btn" type="submit" value="Short IT!">
-</form>
+	<form id="target" action="/urls" method="post" class="style-2">
+		<input class="paste" type="url" name="input_long_url" placeholder="Enter your URL" required ></br>
+		<input class="btn" type="submit" value="Short IT!">
+	</form>
 </center>
 
-<br /><br />
+<br><br>
 
 <table class="table-url-links">
 	<tr>
@@ -48,51 +44,49 @@
 		<th class="th2">Create At</th>
 		<th class="th2">Clicks</th>
 	</tr>	
-<% @urls.each do |url| %>
-	<tr> 
-		<td> <%= url.id %> </td> 
-		<td> <%= url.long_url %> </td> 
-		<td> <a href="/<%= url.short_url %>">	<%= ENV['APP_URL'] %>/<%= url.short_url %> </a> </td>
+	<% @urls.each do |url| %>
+		<tr> 
+			<td> <%= url.id %> </td> 
+			<td> <%= url.long_url %> </td> 
+			<td> <a href="/<%= url.short_url %>">	<%= ENV['APP_URL'] %>/<%= url.short_url %> </a> </td>
 
-		<td><a id="copy_shortlink" class="" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
-			<td> <%= url.created_at.strftime("%d %b. %Y at %H:%M") %> </td>  
-			<td> <%= url.counter %> </td> 
-	</tr>
-<% end %>
+			<td><a id="copy_shortlink" class="" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
+				<td> <%= url.created_at.strftime("%d %b. %Y at %H:%M") %> </td>  
+				<td> <%= url.counter %> </td> 
+		</tr>
+	<% end %>
 </table>
 
+<br><br><br>
 
-<br /><br /><br />
-
-<h1>MAGiC.STATISTIC</h1>
+<h1 class="statistic-here">MAGiC.STATISTIC</h1>
 
 <div class="wrapper">
-    <div class="counter col_fourth">
-      <i class="fa fa-code fa-2x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="<%= @total_url%>" data-speed="1500"></h2>
-       <p class="count-text ">URL shorted</p>
-    </div>
+  <div class="counter col_fourth">
+    <i class="fa fa-code fa-2x"></i>
+    <h2 class="timer count-title" id="count-number" data-to="<%= @total_url%>" data-speed="1500"></h2>
+     <p class="count-text ">URL shorted</p>
+  </div>
 
-    <div class="counter col_fourth">
-      <i class="fa fa-coffee fa-2x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="<%= @total_click%>" data-speed="1500"></h2>
-      <p class="count-text ">Total clicks</p>
-    </div>
+  <div class="counter col_fourth">
+    <i class="fa fa-coffee fa-2x"></i>
+    <h2 class="timer count-title" id="count-number" data-to="<%= @total_click%>" data-speed="1500"></h2>
+    <p class="count-text ">Total clicks</p>
+  </div>
 
-    <div class="counter col_fourth">
-      <i class="fa fa-lightbulb-o fa-2x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="<%= @total_saved_char%>" data-speed="1500"></h2>
-      <p class="count-text ">Saved characters </p>
-    </div>
+  <div class="counter col_fourth">
+    <i class="fa fa-lightbulb-o fa-2x"></i>
+    <h2 class="timer count-title" id="count-number" data-to="<%= @total_saved_char%>" data-speed="1500"></h2>
+    <p class="count-text ">Saved characters </p>
+  </div>
 
-    <div class="counter col_fourth end">
-      <i class="fa fa-bug fa-2x"></i>
-      <h2 class="timer count-title" id="count-number" data-to="0" data-speed="1500"></h2>
-      <p class="count-text ">Coming Soon</p>
-    </div>
+  <div class="counter col_fourth end">
+    <i class="fa fa-bug fa-2x"></i>
+    <h2 class="timer count-title" id="count-number" data-to="0" data-speed="1500"></h2>
+    <p class="count-text ">Coming Soon</p>
+  </div>
 </div>
 
 <div class="clearfix"></div>
 
 <h3>Thanks for being with us</h3>
-

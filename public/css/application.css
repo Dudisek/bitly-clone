@@ -1,7 +1,3 @@
-
-
-
-
 h1 {
 	text-align: center;
 	color: white;
@@ -31,18 +27,6 @@ color: #fcd04b;
 .yellow {color: #fcb325;}
 .orange {color: #e75424;}
 .black {color: #FFFFFF;}
-/*.background {
-
-  font-family: 'Lato', Calibri, Arial, sans-serif;
-  background-image: url("/img/background-css.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-   background-size: 100% auto;
-    background-position: center top;
-      background-size: cover;
-}
-*/
-
 
 body {
   background-color: black;
@@ -54,7 +38,6 @@ body {
   background-size: cover;
 }
 
-
 input[type="url"] {
   display: block;
   margin: 0;
@@ -63,7 +46,6 @@ input[type="url"] {
   font-size: 33px;
   text-align: center;
 }
-
 
 .style-2 input[type="text"] {
   padding: 10px;
@@ -95,10 +77,6 @@ input[type="url"] {
 background: #fcd357;
   box-shadow: 0 4px #DEAF00;
 }
-
-
-/**/
-
 
 .top-bar 
 {
@@ -178,7 +156,6 @@ margin-top: 25px;
 line-height: 50px;  
 }
 
-
 .required_notification {
     color:#d45252; 
     margin:5px 0 0 0; 
@@ -220,22 +197,21 @@ box-shadow: 0 0 5px #2eb82e;
     left:-6px;
 }
 
-  td {
-    margin: 8px;
-    font-size: 16px;
-  }
-  .selected {
-    color: red;
-    background: #000000;
-  }
-  .highlight {
-    background: yellow;
-  }
+td {
+  margin: 8px;
+  font-size: 16px;
+}
+.selected {
+  color: red;
+  background: #000000;
+}
+.highlight {
+  background: yellow;
+}
 
 .contact_form input:focus + .form_hint {display: inline;}
 .contact_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
 .contact_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
-
 
 
 body {

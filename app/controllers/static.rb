@@ -11,14 +11,7 @@ end
 post '/urls' do
 	puts "[LOG:] Creating ID"
 	@url = Url.create(long_url: params[:input_long_url])
-	# url_shorten_qty = Setting.first.url_shorten_qty + 1
-	# Setting.update(url_shorten_qty: url_shorten_qty)
 
-	
-	# @urls = Url.all
-	# redirect "/"
-	# @url.to_json
-	# @urls.each do |url|
 	{
 		string: "<tr>
       <td>#{@url.id}</td>
@@ -30,34 +23,17 @@ post '/urls' do
    </tr>",
    url: "#{ENV['APP_URL']}/#{@url.short_url}"
 	}.to_json
-	  
 
-   
-
-
-
- # end
-end
-
-
-# post '/delete' do
-# 	puts "[LOG:] Deleteing ID"
-# 	Url.destroy(params[:write_id])
-# 	redirect "/"
-# end
-
-get '/contact' do
-  erb :"static/contact"
 end
 
 get '/:short_url' do
 	url = Url.find_by(short_url: params[:short_url])
 	
-	unless url.nil?
+	if url.nil?
+		redirect "/"
+	else
 		url.count
 		redirect url.long_url
-	else
-		redirect "/"
 	end
 end
 
