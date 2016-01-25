@@ -6,6 +6,13 @@ h1 {
 	clear: both;
 }
 
+.overme {
+    width: 400px;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+
 .success {
   background: white;
   border-style: solid;

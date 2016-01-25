@@ -40,17 +40,16 @@
 	<tr>
 		<th class="th2">ID</th>
 		<th class="th2">Long URL</th>
-		<th class="th2" colspan="2">Short URL</th>
+		<th class="th2">Short URL</th>
 		<th class="th2">Create At</th>
 		<th class="th2">Clicks</th>
 	</tr>	
 	<% @urls.each do |url| %>
 		<tr> 
 			<td> <%= url.id %> </td> 
-			<td> <%= url.long_url %> </td> 
-			<td> <a href="/<%= url.short_url %>">	<%= ENV['APP_URL'] %>/<%= url.short_url %> </a> </td>
+			<td> <div class="overme"><%= url.long_url %></div> </td> 
+			<td> <div class="overme"> <a href="/<%= url.short_url %>">	<%= ENV['APP_URL'] %>/<%= url.short_url %> </a> </div> </td>
 
-			<td><a id="copy_shortlink" class="" href="#" data-clipboard-text="HelloWorld">Copy</a></td>
 				<td> <%= url.created_at.strftime("%d %b. %Y at %H:%M") %> </td>  
 				<td> <%= url.counter %> </td> 
 		</tr>
