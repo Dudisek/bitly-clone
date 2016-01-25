@@ -1,7 +1,8 @@
 #My APP
-My first Sinatra app
 <br>
-Demo: magic-url.herokuapp.com
+DEMO: <a href="http://magic-url.herokuapp.com">MaGIC-URL.herokuapp.com</a>
+<br><br>
+My first Sinatra app
 <br>
 HTML, CSS, Ajax, Javascript
 
